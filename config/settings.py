@@ -25,10 +25,10 @@ environ.Env.read_env()
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-SECRET_KEY = env('django-insecure-ij-abir=-_5zz2(edj4+t#*&--fre)!+f0g)z+x1ihx4+x+q+^')
+SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = env('DEBUG', default=False)
 
 ALLOWED_HOSTS = ['213.130.147.111', 'bhseeds.com']
 
