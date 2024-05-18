@@ -22,9 +22,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ij-abir=-_5zz2(edj4+t#*&--fre)!+f0g)z+x1ihx4+x+q+^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['213.130.147.111' , 'bhseeds.com']
 
 # Application definition
 
