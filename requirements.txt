@@ -3,3 +3,4 @@ Django==3.2.12
 pillow==10.2.0
 sqlparse==0.4.4
 tzdata==2024.1
+environ==1.0
