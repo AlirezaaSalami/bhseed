@@ -1,0 +1,244 @@
+
+
+
+.navbar-logo {
+    display: inline-block;
+    width: 263px; /* عرض مورد نظر برای لوگو */
+    height: 100px; /* ارتفاع مورد نظر برای لوگو */
+    background-image: url('../images/logo.png');
+    background-size: contain; /* به اندازه کافی بزرگ تا تصویر را درون المان جا شود */
+    background-repeat: no-repeat; /* جلوگیری از تکرار تصویر */
+}
+
+@media (max-width: 767px) {
+    .navbar-logo {
+        width: 118px;
+        height: 48.6px; /* ارتفاع navbar برای موبایل */
+    }
+}
+
+/* شروع لاین زرد بالا */
+.navbar-with-bg {
+    background-image: url('../images/nav-back.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 74px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+    .navbar-with-bg {
+        height: 48px; /* ارتفاع navbar برای موبایل */
+    }
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-nav .nav-item img {
+    width: 40px; /* سایز تصاویر */
+    height: 40px;
+    margin-right: 10px; /* فاصله بین تصاویر */
+}
+
+/* لاین زرد بالا تمومه */
+
+
+.navbar-with-bg-rectangle30 {
+    background-image: url('../images/Rectangle30.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-nav-rectangle30 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-nav-rectangle30 .nav-item img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+
+@media (max-width: 767px) {
+    .navbar-nav-rectangle30 .nav-item img {
+        width: 60px;
+        height: 60px;
+        margin-right: 5px;
+    }
+}
+    .dis-my-card {
+        background-color: #333; /* تنظیم رنگ پس زمینه */
+        color: #fff; /* تنظیم رنگ متن */
+        border-radius: 10px; /* تنظیم شکل گوشه‌ها */
+        padding: 20px; /* افزودن فاصله داخلی */
+        margin-bottom: 20px; /* افزودن فاصله بین کارت‌ها */
+    }
+
+    .dis-my-card-header {
+        padding-bottom: 10px; /* افزودن فاصله بین عنوان و بدنه */
+    }
+
+    .dis-my-card-title {
+        font-size: 24px; /* تنظیم اندازه فونت عنوان */
+        margin-bottom: 0; /* حذف فاصله پایینی عنوان */
+    }
+
+    .dis-my-card-text {
+        font-size: 12px; /* تنظیم اندازه فونت متن */
+    }
+
+
+    .dis-container {
+        margin-top: 50px; /* افزودن فاصله بین بخش بالایی سایت و کارت‌ها */
+    }
+
+
+
+@media (max-width: 768px) {
+    .instagram img,
+    .whatsapp img,
+    .e-mail img,
+    .twitter img {
+        width: 64px;
+        height: 64px;
+        display: inline-block;
+    }
+}
+
+
+/* تغییر رنگ زمانی که روی المان موس را حرکت می‌دهید */
+.product-inner:hover {
+    background-color: #f8f9fa;
+}
+
+.product-inner {
+    width: 220px; /* عرض دلخواه */
+    height: 220px; /* ارتفاع دلخواه */
+    background-color: #e9ecef;
+}
+
+.product-image a {
+    display: inline-block;
+    width: 220px; /* عرض دلخواه با اعمال padding */
+    height: 220px; /* ارتفاع دلخواه با اعمال padding */
+    padding: 10px; /* پدینگ دلخواه */
+    box-sizing: border-box; /* حفظ ابعاد کلی لینک */
+}
+
+.product-item-info {
+    position: relative;
+}
+
+.product-item-img {
+    position: relative;
+}
+
+.product-item-img a {
+    display: block;
+    text-align: center;
+    max-width: 500px;
+}
+
+.product-item-img img {
+    max-width: 100%;
+}
+
+.product-item-details {
+    text-align: center;
+}
+
+.product-item-name a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.product-price-wrapper {
+    margin-top: 10px;
+}
+
+.price-container .price-final_price .price-wrapper .money {
+    color: #007bff;
+}
+
+.price-container .price-final_price .price-wrapper .money::before {
+    content: '';
+}
+
+.price-container .price-final_price .price-wrapper .money::after {
+    content: ' $';
+}
+
+
+/* کد برای ورژن‌های مختلف */
+.navbarft {
+    background-image: url('/static/images/footer.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 447px; /* ارتفاع navbar برای دسکتاپ */
+    width: 100%; /* عرض navbar */
+    display: flex;
+    flex-direction: column; /* ترتیب محتوا به صورت ستونی */
+    justify-content: center; /* تراز کردن محتوای درون navbar عمودی */
+    align-items: flex-end; /* تراز کردن محتوای به چپ */
+    padding: 0 20px; /* فاصله بین محتوا و حاشیه‌ی navbar */
+}
+
+
+/* تنظیم ارتفاع برای موبایل در حالت عمودی */
+@media (max-width: 767px) and (orientation: portrait) {
+    .navbarft {
+        background-image: url('/static/images/footer.phone.png');
+        height: 180px; /* ارتفاع برای موبایل در حالت عمودی */
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding: 0 20px;
+        text-align: right;
+    }
+}
+
+/* Media query برای تنظیمات حالت افقی */
+@media (max-width: 767px) and (orientation: landscape) {
+    .navbarft {
+        background-image: url('/static/images/footer.phone.png');
+        height: 300px; /* ارتفاع برای حالت افقی */
+        align-items: flex-end; /* تنظیم به راست */
+        justify-content: flex-end; /* تنظیم به پایین */
+        padding: 0 20px;
+        text-align: right;
+    }
+}
+
+
+
+a {
+    color: #FFFFFF;}
+
+
+
+
+.bg-dark {
+    background-color: #000000 !important;
+}
+
+
+.nav-link1 {
+    color: #FFE500 !important;
+}
+
+
+
+
+

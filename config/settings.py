@@ -30,9 +30,10 @@ environ.Env.read_env()
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env('DEBUG', default=False)
+DEBUG = True
 
 ALLOWED_HOSTS = ['213.130.147.111', 'bhseeds.com', 'localhost', '127.0.0.1']
+
 
 # Application definition
 
@@ -126,6 +127,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
