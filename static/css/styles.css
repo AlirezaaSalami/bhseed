@@ -1,6 +1,4 @@
 
-
-
 .navbar-logo {
     display: inline-block;
     width: 263px; /* عرض مورد نظر برای لوگو */
@@ -37,7 +35,7 @@
 .navbar-nav {
     display: flex;
     justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
 }
 
 .navbar-nav .nav-item img {
@@ -77,34 +75,35 @@
         width: 90px;
         height: 90px;
         margin-right: 15px;
+        margin-bottom: 15px;
     }
 }
-    .dis-my-card {
-        background-color: #333; /* تنظیم رنگ پس زمینه */
-        color: #fff; /* تنظیم رنگ متن */
-        border-radius: 10px; /* تنظیم شکل گوشه‌ها */
-        padding: 20px; /* افزودن فاصله داخلی */
-        margin-bottom: 20px; /* افزودن فاصله بین کارت‌ها */
-    }
 
-    .dis-my-card-header {
-        padding-bottom: 10px; /* افزودن فاصله بین عنوان و بدنه */
-    }
+.dis-my-card {
+    background-color: #333; /* تنظیم رنگ پس زمینه */
+    color: #fff; /* تنظیم رنگ متن */
+    border-radius: 10px; /* تنظیم شکل گوشه‌ها */
+    padding: 20px; /* افزودن فاصله داخلی */
+    margin-bottom: 20px; /* افزودن فاصله بین کارت‌ها */
+}
 
-    .dis-my-card-title {
-        font-size: 24px; /* تنظیم اندازه فونت عنوان */
-        margin-bottom: 0; /* حذف فاصله پایینی عنوان */
-    }
+.dis-my-card-header {
+    padding-bottom: 10px; /* افزودن فاصله بین عنوان و بدنه */
+}
 
-    .dis-my-card-text {
-        font-size: 12px; /* تنظیم اندازه فونت متن */
-    }
+.dis-my-card-title {
+    font-size: 24px; /* تنظیم اندازه فونت عنوان */
+    margin-bottom: 0; /* حذف فاصله پایینی عنوان */
+}
+
+.dis-my-card-text {
+    font-size: 12px; /* تنظیم اندازه فونت متن */
+}
 
 
-    .dis-container {
-        margin-top: 50px; /* افزودن فاصله بین بخش بالایی سایت و کارت‌ها */
-    }
-
+.dis-container {
+    margin-top: 50px; /* افزودن فاصله بین بخش بالایی سایت و کارت‌ها */
+}
 
 
 @media (max-width: 768px) {
@@ -222,11 +221,9 @@
 }
 
 
-
 a {
-    color: #FFFFFF;}
-
-
+    color: #FFFFFF;
+}
 
 
 .bg-dark {
@@ -239,6 +236,10 @@ a {
 }
 
 
-
-
-
+@media (max-width: 767px) {
+    .carousel-item img {
+        height: 200px; /* حداکثر ارتفاع تصاویر در نسخه موبایل */
+        background-size: cover;
+        background-position: center;
+    }
+}
