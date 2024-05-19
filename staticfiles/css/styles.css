@@ -66,17 +66,17 @@
 }
 
 .navbar-nav-rectangle30 .nav-item img {
-    width: 100px;
-    height: 100px;
-    margin-right: 10px;
+    width: 150px;
+    height: 150px;
+    margin-right: 50px;
 }
 
 
 @media (max-width: 767px) {
     .navbar-nav-rectangle30 .nav-item img {
-        width: 60px;
-        height: 60px;
-        margin-right: 5px;
+        width: 100px;
+        height: 100px;
+        margin-right: 20px;
     }
 }
     .dis-my-card {
