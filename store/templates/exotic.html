@@ -1,0 +1,46 @@
+{% extends '_base.html' %}
+{% load static %}
+{% block content %}
+<br>
+<h1 class="exotic-title">Exotic Page</h1>
+<br>
+<div class="exotic-container">
+    <div class="exotic-item">
+        <div class="exotic-card">
+            <img src="{% static 'images/exo1.png' %}" alt="Image 1">
+            <p>Random 3-Pack</p>
+        </div>
+    </div>
+    <div class="exotic-item">
+        <div class="exotic-card">
+            <img src="{% static 'images/exo2.png' %}" alt="Image 2">
+            <p>Yikes</p>
+        </div>
+    </div>
+    <div class="exotic-item">
+        <div class="exotic-card">
+            <img src="{% static 'images/exo3.png' %}" alt="Image 3">
+            <p>Lazer Fuel</p>
+        </div>
+    </div>
+    <div class="exotic-item">
+        <div class="exotic-card">
+            <img src="{% static 'images/exo4.png' %}" alt="Image 4">
+            <p>Apes in Space</p>
+        </div>
+    </div>
+    <div class="exotic-item">
+        <div class="exotic-card">
+            <img src="{% static 'images/exo5.png' %}" alt="Image 5">
+            <p>Black Patronus</p>
+        </div>
+    </div>
+    <div class="exotic-item">
+        <div class="exotic-card">
+            <img src="{% static 'images/exo6.png' %}" alt="Image 6">
+            <p>Money Ball</p>
+        </div>
+    </div>
+</div>
+    <br>
+{% endblock %}

@@ -243,3 +243,61 @@ a {
         background-position: center;
     }
 }
+
+
+
+
+.exotic-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: yellow;
+    margin-bottom: 20px;
+}
+
+.exotic-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.exotic-item {
+    width: 30%;
+    margin: 10px 0;
+}
+
+@media (max-width: 767px) {
+    .exotic-item {
+        width: 45%; /* دو تصویر در هر سطر */
+        margin: 10px 2.5%; /* برای ایجاد فاصله بین کارت‌ها */
+    }
+
+    .exotic-card p {
+        font-size: 0.9em; /* فونت کوچکتر برای نسخه موبایل */
+    }
+}
+
+.exotic-card {
+    background-color: rgb(49 49 49 / 80%); /* رنگ خاکستری کم‌رنگ با شفافیت */
+    border: 1px solid #000000;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* سایه مشکی */
+    transition: transform 0.3s;
+}
+
+.exotic-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+
+.exotic-card p {
+    margin-top: 10px;
+    font-size: 1em;
+    padding: 0 5px; /* حذف حاشیه و ایجاد فاصله داخلی */
+}
+
+.exotic-card:hover {
+    transform: scale(1.05);
+}
