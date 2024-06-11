@@ -292,6 +292,23 @@ a {
     border-radius: 10px 10px 0 0;
 }
 
+/* Media Query for Mobile Devices */
+@media (max-width: 767px) {
+    .exotic-card img {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+/* Media Query for Desktop Devices */
+@media (min-width: 768px) {
+    .exotic-card img {
+        width: 340px;
+        height: 340px;
+    }
+}
+
+
 .exotic-card p {
     margin-top: 10px;
     font-size: 1em;
