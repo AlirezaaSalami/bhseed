@@ -245,8 +245,6 @@ a {
 }
 
 
-
-
 .exotic-title {
     text-align: center;
     font-size: 2.5em;
@@ -317,4 +315,57 @@ a {
 
 .exotic-card:hover {
     transform: scale(1.05);
+}
+
+
+
+
+
+
+.custom-modal-title {
+    font-size: 3.5rem; /* افزایش بیشتر اندازه فونت عنوان */
+    color: #000; /* تنظیم رنگ به مشکی */
+    text-align: center; /* وسط‌چین کردن متن */
+
+}
+
+.custom-modal-text {
+    font-size: 2.5rem; /* کاهش اندازه فونت متن */
+    color: #000; /* تنظیم رنگ به مشکی */
+    text-align: center; /* وسط‌چین کردن متن */
+}
+
+.custom-modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* وسط‌چین کردن محتوای مودال */
+}
+
+.custom-modal-body .btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* فاصله بین دکمه‌ها */
+}
+
+.custom-confirm-btn {
+    color: #fff; /* رنگ متن دکمه */
+}
+
+.custom-deny-btn {
+    color: #fff; /* رنگ متن دکمه */
+}
+
+.custom-deny-btn:hover {
+    background-color: #dc3545; /* تغییر رنگ پس‌زمینه به قرمز هنگام هاور */
+}
+
+/* استایل‌های مخصوص موبایل */
+@media (max-width: 576px) {
+    .custom-modal-body {
+        flex-direction: column;
+    }
+
+    .custom-modal-body .btn-group {
+        flex-direction: row; /* قرار دادن دکمه‌ها کنار هم */
+    }
 }
