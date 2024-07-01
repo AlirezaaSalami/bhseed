@@ -44,101 +44,110 @@
 
     <br><br>
 
-    <div class="container">
-        <div class="navbar-collapse d-flex justify-content-center align-items-center" id="navbarNav2">
-            <ul class="navbar-nav justify-content-center navbar-nav-rectangle30 flex-row flex-wrap">
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'exotic' %}">
-                        <img src="{% static 'images/exotic.png' %}" alt="exotic" width="100" height="100">
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'gg' %}">
-                        <img src="{% static 'images/ggg.jpg' %}" alt="Twitter" width="50" height="50">
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'tiki' %}">
-                        <img src="{% static 'images/Layer 13 1.png' %}" alt="Instagram" width="30" height="30">
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'freshcoast' %}">
-                        <img src="{% static 'images/Layer 11 1.png' %}" alt="Instagram" width="30" height="30">
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'holysmoke' %}">
-                        <img src="{% static 'images/Rectangle.png' %}" alt="Instagram" width="30" height="30">
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" id="group7Link">
-                        <img src="{% static 'images/Group 7.png' %}" alt="Instagram" width="30" height="30"
-                             id="group7Image">
-                    </a>
-                </li>
-
-                <!-- تصاویر زیر GROUP7 -->
-                <li class="nav-item" style="display: none;">
-                    <a class="nav-link" href="{% url 'compound' %}">
-                        <img src="{% static 'images/Layer 7 1.png' %}" alt="Instagram" width="30" height="30">
-                    </a>
-                </li>
-                <li class="nav-item" style="display: none;">
-                    <a class="nav-link" href="{% url 'clearwater' %}">
-                        <img src="{% static 'images/Layer 6 1.png' %}" alt="Instagram" width="30" height="30">
-                    </a>
-                </li>
-                <li class="nav-item" style="display: none;">
-                    <a class="nav-link" href="{% url 'ciphergenetic' %}">
-                        <img src="{% static 'images/Layer 5 1.png' %}" alt="Instagram" width="30" height="30">
-                    </a>
-                </li>
-                <li class="nav-item" style="display: none;">
-                    <a class="nav-link" href="{% url 'bloomseeds' %}">
-                        <img src="{% static 'images/Layer 4 1.png' %}" alt="Instagram" width="30" height="30">
-                    </a>
-                </li>
-                <li class="nav-item" style="display: none;">
-                    <a class="nav-link" href="{% url 'rkiem' %}">
-                        <img src="{% static 'images/Layer 2 1.png' %}" alt="Instagram" width="30" height="30">
-                    </a>
-                </li>
-                <li class="nav-item" style="display: none;">
-                    <a class="nav-link" href="{% url 'barnys' %}">
-                        <img src="{% static 'images/barneysnobg 1.png' %}" alt="Instagram" width="30" height="30">
-                    </a>
-                </li>
-                <li class="nav-item" style="display: none;">
-                    <a class="nav-link" href="{% url 'green' %}">
-                        <img src="{% static 'images/GHSlogo 1.png' %}" alt="Instagram" width="30" height="30">
-                    </a>
-                </li>
-                <li class="nav-item" style="display: none;">
-                    <a class="nav-link" href="{% url 'serious' %}">
-                        <img src="{% static 'images/logo-serious-seeds 1.png' %}" alt="Instagram" width="30"
-                             height="30">
-                    </a>
-                </li>
-                <li class="nav-item" style="display: none;">
-                    <a class="nav-link" href="{% url 'zmoothiez' %}">
-                        <img src="{% static 'images/Layer 15 1.png' %}" alt="Instagram" width="30" height="30">
-                    </a>
-                </li>
-                <li class="nav-item" style="display: none;">
-                    <a class="nav-link" href="{% url 'ethos' %}">
-                        <img src="{% static 'images/ethos.png' %}" alt="Instagram" width="30" height="30">
-                    </a>
-                </li>
-                <li class="nav-item" style="display: none;">
-                    <a class="nav-link" href="{% url '3rd' %}">
-                        <img src="{% static 'images/3rd-Coast-Genetics.jpg' %}" alt="Instagram" width="30" height="30">
-                    </a>
-                </li>
-            </ul>
-        </div>
+<div class="container">
+    <div class="navbar-collapse d-flex justify-content-center align-items-center" id="navbarNav2">
+        <ul class="navbar-nav justify-content-center navbar-nav-rectangle30 flex-row flex-wrap">
+            <li class="nav-item nav-item-companys">
+                <a class="nav-link" href="{% url 'exotic' %}">
+                    <img src="{% static 'images/exotic.png' %}" alt="exotic">
+                    <div class="view-products-companys">View Products</div>
+                </a>
+            </li>
+            <li class="nav-item nav-item-companys">
+                <a class="nav-link" href="{% url 'gg' %}">
+                    <img src="{% static 'images/ggg.jpg' %}" alt="Twitter">
+                    <div class="view-products-companys">View Products</div>
+                </a>
+            </li>
+            <li class="nav-item nav-item-companys">
+                <a class="nav-link" href="{% url 'tiki' %}">
+                    <img src="{% static 'images/Layer 13 1.png' %}" alt="Instagram">
+                    <div class="view-products-companys">View Products</div>
+                </a>
+            </li>
+            <li class="nav-item nav-item-companys">
+                <a class="nav-link" href="{% url 'freshcoast' %}">
+                    <img src="{% static 'images/Layer 11 1.png' %}" alt="Instagram">
+                    <div class="view-products-companys">View Products</div>
+                </a>
+            </li>
+            <li class="nav-item nav-item-companys">
+                <a class="nav-link" href="{% url 'holysmoke' %}">
+                    <img src="{% static 'images/Rectangle.png' %}" alt="Instagram">
+                    <div class="view-products-companys">View Products</div>
+                </a>
+            </li>
+            <li class="nav-item nav-item-companys">
+                <a class="nav-link" href="{% url 'compound' %}">
+                    <img src="{% static 'images/Layer 7 1.png' %}" alt="Instagram">
+                    <div class="view-products-companys">View Products</div>
+                </a>
+            </li>
+            <li class="nav-item nav-item-companys">
+                <a class="nav-link" href="{% url 'clearwater' %}">
+                    <img src="{% static 'images/Layer 6 1.png' %}" alt="Instagram">
+                    <div class="view-products-companys">View Products</div>
+                </a>
+            </li>
+            <li class="nav-item nav-item-companys">
+                <a class="nav-link" href="{% url 'ciphergenetic' %}">
+                    <img src="{% static 'images/Layer 5 1.png' %}" alt="Instagram">
+                    <div class="view-products-companys">View Products</div>
+                </a>
+            </li>
+            <li class="nav-item nav-item-companys">
+                <a class="nav-link" href="{% url 'bloomseeds' %}">
+                    <img src="{% static 'images/Layer 4 1.png' %}" alt="Instagram">
+                    <div class="view-products-companys">View Products</div>
+                </a>
+            </li>
+            <li class="nav-item nav-item-companys">
+                <a class="nav-link" href="{% url 'rkiem' %}">
+                    <img src="{% static 'images/Layer 2 1.png' %}" alt="Instagram">
+                    <div class="view-products-companys">View Products</div>
+                </a>
+            </li>
+            <li class="nav-item nav-item-companys">
+                <a class="nav-link" href="{% url 'barnys' %}">
+                    <img src="{% static 'images/barneysnobg 1.png' %}" alt="Instagram">
+                    <div class="view-products-companys">View Products</div>
+                </a>
+            </li>
+            <li class="nav-item nav-item-companys">
+                <a class="nav-link" href="{% url 'green' %}">
+                    <img src="{% static 'images/GHSlogo 1.png' %}" alt="Instagram">
+                    <div class="view-products-companys">View Products</div>
+                </a>
+            </li>
+            <li class="nav-item nav-item-companys">
+                <a class="nav-link" href="{% url 'serious' %}">
+                    <img src="{% static 'images/logo-serious-seeds 1.png' %}" alt="Instagram">
+                    <div class="view-products-companys">View Products</div>
+                </a>
+            </li>
+            <li class="nav-item nav-item-companys">
+                <a class="nav-link" href="{% url 'zmoothiez' %}">
+                    <img src="{% static 'images/Layer 15 1.png' %}" alt="Instagram">
+                    <div class="view-products-companys">View Products</div>
+                </a>
+            </li>
+            <li class="nav-item nav-item-companys">
+                <a class="nav-link" href="{% url 'ethos' %}">
+                    <img src="{% static 'images/ethos.png' %}" alt="Instagram">
+                    <div class="view-products-companys">View Products</div>
+                </a>
+            </li>
+            <li class="nav-item nav-item-companys">
+                <a class="nav-link" href="{% url '3rd' %}">
+                    <img src="{% static 'images/3rd-Coast-Genetics.jpg' %}" alt="Instagram">
+                    <div class="view-products-companys">View Products</div>
+                </a>
+            </li>
+        </ul>
     </div>
+</div>
+
+
     <br><br>
 
     <!-- Modal -->

@@ -47,37 +47,7 @@
 /* لاین زرد بالا تمومه */
 
 
-.navbar-with-bg-rectangle30 {
-    background-image: url('../images/Rectangle30.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.navbar-nav-rectangle30 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.navbar-nav-rectangle30 .nav-item img {
-    width: 150px;
-    height: 150px;
-    margin-right: 0px;
-}
-
-
-@media (max-width: 767px) {
-    .navbar-nav-rectangle30 .nav-item img {
-        width: 90px;
-        height: 90px;
-        margin-right: 9px;
-        margin-bottom: 15px;
-    }
-}
 
 .dis-my-card {
     background-color: #333; /* تنظیم رنگ پس زمینه */
@@ -367,5 +337,64 @@ a {
 
     .custom-modal-body .btn-group {
         flex-direction: row; /* قرار دادن دکمه‌ها کنار هم */
+    }
+}
+
+
+
+
+.navbar-with-bg-rectangle30 {
+    background-image: url('../images/Rectangle30.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-nav-rectangle30 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-nav-rectangle30 .nav-item img {
+    width: 150px;
+    height: 150px;
+    margin-right: 0px;
+}
+
+@media (max-width: 767px) {
+    .navbar-nav-rectangle30 .nav-item img {
+        width: 90px;
+        height: 90px;
+        margin-right: 9px;
+        margin-bottom: 15px;
+    }
+}
+
+.nav-item-companys {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.nav-item-companys:hover img {
+    transform: scale(1.1);
+}
+
+.view-products-companys {
+    text-align: center;
+    margin-top: 10px; /* Adjust this value to move the text down */
+    font-size: 14px;
+    color: #a9a8a8;
+}
+
+@media (max-width: 767px) {
+    .view-products-companys {
+        font-size: 12px;
     }
 }
