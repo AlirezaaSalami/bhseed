@@ -28,92 +28,227 @@
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-custom">
-    <div class="container">
-        <a class="navbar-logo" href="{% url 'home' %}" id="logo"></a>
-        <button class="navbar-toggler" id="navbar-toggler" aria-controls="navbarNav"
-                aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active mr-5">
-                    <a class="nav-link1" href="{% url 'home' %}">Home</a>
-                </li>
-                <li class="nav-item active mr-5">
-                    <a class="nav-link1" href="{% url 'aboutus' %}">About US</a>
-                </li>
-                <li class="nav-item active mr-5">
-                    <a class="nav-link1" href="{% url 'contact_us' %}">Contact US</a>
-                </li>
-            </ul>
-        </div>
+<header>
+    <a class="mobile-menu-icon">
+        <img src="{% static 'images/mobile-menu.svg' %}">
+    </a>
+    <div class="mobile-off-canvas-bg hidden">
     </div>
-</nav>
+    <nav class="navigation">
+        <a class="mobile-menu-close-icon">
+            <img src="{% static 'images/close-menu-icon.svg' %}">
+        </a>
+        <a class="menu-item">
+            <img src="{% static 'images/account.svg' %}"/>
+            <span>
+            Account
+        </span>
+        </a>
+        <a class="menu-item">
+            <img src="{% static 'images/account.svg' %}"/>
+            <span>
+            Account
+        </span>
+        </a>
+        <a class="menu-item">
+            <img src="{% static 'images/account.svg' %}"/>
+            <span>
+            Account
+        </span>
+        </a>
+        <a class="menu-item">
+            <img src="{% static 'images/account.svg' %}"/>
+            <span>
+            Account
+        </span>
+        </a>
+        <a class="menu-item">
+            <img src="{% static 'images/account.svg' %}"/>
+            <span>
+            Account
+        </span>
+        </a>
+    </nav>
 
-<!-- جاوااسکریپت برای مدیریت باز و بسته شدن -->
+    <img src="{% static 'images/logo.png' %}" class="logo"/>
+    <div class="socialmedia">
+        <a
+                href="mailto:bloomhouse.seedbank.contact@gmail.com?subject=Your%20Subject%20Here">
+            <img class="navbar-image" src="{% static 'images/e-mail.jpg' %}" alt="Email">
+        </a>
+        <a href="https://wa.me/995558497292">
+            <img class="navbar-image" src="{% static 'images/whatsapp.jpg' %}" alt="WhatsApp">
+        </a>
+        <a href="https://www.instagram.com/bloomhouseir?igsh=ZGI0N3JrMjZ2OW9x">
+            <img class="navbar-image" src="{% static 'images/instagram.jpg' %}" alt="Instagram">
+        </a>
+        <a href="#">
+            <img class="navbar-image" src="{% static 'images/twitter.jpg' %}" alt="Twitter">
+        </a>
+    </div>
+</header>
+
 <script>
-    document.getElementById("navbar-toggler").addEventListener("click", function () {
-        var navbar = document.getElementById("navbarNav");
-        if (navbar.classList.contains("show")) {
-            navbar.classList.remove("show");
-        } else {
-            navbar.classList.add("show");
-        }
-    });
+
+    const mobileMenuIcon = document.querySelector('.mobile-menu-icon')
+    const mobileMenuCloseIcon = document.querySelector('.mobile-menu-close-icon')
+    const mobileOffCanvasBg = document.querySelector('.mobile-off-canvas-bg')
+    const mobileOffCanvasMenu = document.querySelector('.navigation')
+    mobileMenuIcon.addEventListener('click', () => {
+        mobileOffCanvasBg.classList.toggle('block')
+        document.body.classList.toggle('bodyfix')
+        mobileOffCanvasMenu.classList.remove('toleftmenuanimation')
+        mobileOffCanvasMenu.classList.toggle('torightmenuanimation')
+        mobileOffCanvasMenu.classList.toggle('openmenu')
+    })
+
+    function closeMobileMenu() {
+        mobileOffCanvasMenu.classList.toggle('torightmenuanimation')
+        mobileOffCanvasMenu.classList.toggle('toleftmenuanimation')
+        setTimeout(() => {
+            mobileOffCanvasMenu.classList.toggle('openmenu')
+        }, 1000)
+        setTimeout(() => {
+            mobileOffCanvasBg.classList.toggle('block')
+            document.body.classList.toggle('bodyfix')
+        }, 990)
+    }
+
+    mobileOffCanvasBg.addEventListener('click', closeMobileMenu)
+    mobileMenuCloseIcon.addEventListener('click', closeMobileMenu)
 </script>
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-with-bg">
-    <div class="container">
-        <div class="collapse navbar-collapse d-flex justify-content-center align-items-center" id="navbarNav2">
-            <ul class="navbar-nav flex-row">
-                <li class="nav-item">
-                    <a class="nav-link" href="https://www.instagram.com/bloomhouseir?igsh=ZGI0N3JrMjZ2OW9x">
-                        <img src="{% static 'images/instagram.jpg' %}" alt="Instagram" width="30" height="30">
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <img src="{% static 'images/twitter.jpg' %}" alt="Twitter" width="30" height="30">
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://wa.me/995558497292">
-                        <img src="{% static 'images/whatsapp.jpg' %}" alt="Twitter" width="30" height="30">
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="mailto:bloomhouse.seedbank.contact@gmail.com?subject=Your%20Subject%20Here">
-                        <img src="{% static 'images/e-mail.jpg' %}" alt="Email" width="30" height="30">
-                    </a>
-                </li>
-
-            </ul>
-        </div>
-    </div>
-</nav>
 
 {% block content %}
 
 {% endblock %}
 
 
-<nav class="navbarft">
-    <div class="navbar-container">
-        <div class="navbar-brand">
+<footer>
+    <div class="footer-cols">
+        <div class="newsletter">
+                <span class="">
+                    SIGN UP TO OUR NEWSLETTER
+                </span>
+            <form method="post" action="#">
+                <input type="email" placeholder="Enter your Email address">
+                <input type="submit" value="Subscribe">
+            </form>
         </div>
-        <ul class="navbar-menu">
-            <li><a href="/">Home</a></li>
-            <li><a href="/aboutus">About</a></li>
-            <li><a href="/contactus">Contact</a></li>
-            <li><a href="/disclaimer">Disclaimer</a></li>
-        </ul>
-
+        <div class="information">
+                <span>
+                    INFORMATION
+                </span>
+            <ul>
+                <a href="">
+                    <li>
+                        About Us
+                    </li>
+                </a>
+                <a href="">
+                    <li>
+                        About Us
+                    </li>
+                </a>
+                <a href="">
+                    <li>
+                        About Us
+                    </li>
+                </a>
+                <a href="">
+                    <li>
+                        Shipping & Delivery
+                    </li>
+                </a>
+                <a href="">
+                    <li>
+                        About Us
+                    </li>
+                </a>
+                <a href="">
+                    <li>
+                        About Us
+                    </li>
+                </a>
+                <a href="">
+                    <li>
+                        About Us
+                    </li>
+                </a>
+            </ul>
+        </div>
+        <div class="information">
+                <span>
+                    INFORMATION
+                </span>
+            <ul>
+                <a href="">
+                    <li>
+                        About Us
+                    </li>
+                </a>
+                <a href="">
+                    <li>
+                        About Us
+                    </li>
+                </a>
+                <a href="">
+                    <li>
+                        Terms & Conditions
+                    </li>
+                </a>
+                <a href="">
+                    <li>
+                        About Us
+                    </li>
+                </a>
+                <a href="">
+                    <li>
+                        About Us
+                    </li>
+                </a>
+                <a href="">
+                    <li>
+                        About Us
+                    </li>
+                </a>
+                <a href="">
+                    <li>
+                        About Us
+                    </li>
+                </a>
+            </ul>
+        </div>
+        <div class="information">
+                <span>
+                    FOLLOW US
+                </span>
+            <ul>
+                <a href="">
+                    <li>
+                        Instagram
+                    </li>
+                </a>
+                <a href="">
+                    <li>
+                        Twitter
+                    </li>
+                </a>
+            </ul>
+        </div>
     </div>
-</nav>
-
-<!-- متن جدید زیر Navbar -->
+    <p class="footer-desc">
+        All products on this website are intended for individuals aged 18 or older. We kindly ask that all
+        customers review their local laws before making any purchases. The products advertised are solely for
+        adult use, and any information provided is for educational purposes only. We do not condone, promote, or
+        encourage the use of illegal or controlled substances. All items are sold as novelty items and are not
+        meant for any illegal purposes. The descriptions and images of our products come directly from breeders
+        operating within legal contexts. Please note that cultivating any cannabis plant is illegal in many
+        jurisdictions, and our seeds should never be used for this purpose. Our seeds are sold strictly as
+        souvenirs or novelty items and should not be germinated. We strongly encourage you to abide by all
+        applicable laws.
+    </p>
+    <img src="{% static 'images/AK-47.png' %}" class="footer-ak47">
+</footer>
 
 
 <!-- jQuery JS -->
@@ -125,6 +260,7 @@
 <!-- Main JS -->
 <script src="{% static 'js/vendor.js' %}"></script>
 <script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/custom.js' %}"></script>
 
 
 <!-- Bootstrap JS (necessary for Bootstrap's JavaScript plugins) -->
