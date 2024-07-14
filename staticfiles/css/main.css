@@ -1,0 +1,234 @@
+
+html {
+    height: 100%;
+    font-size: 62.5%;
+}
+
+@media (max-width: 93.6875em) {
+    html {
+        font-size: 56.25%;
+    }
+}
+
+@media (max-width: 74.9375em) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media (max-width: 61.94em) {
+    html {
+        font-size: 37.5%;
+    }
+}
+
+@media (max-width: 47.94em) {
+    html {
+        font-size: 31.25%;
+    }
+}
+
+body {
+    font-size: 16px;
+    font-family: "IRANSansX", sans-serif;
+    color: #ffffff;
+    line-height: 1.75;
+    font-weight: 400;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    font-family: "IRANSansX", sans-serif;
+    color: #ffffff;
+}
+
+p {
+    font-size:20px;
+    color: #ffffff;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+
+a,
+a:hover,
+a:focus,
+a:active,
+button,
+button:focus,
+input,
+select,
+textarea,
+.slick-slide {
+    outline: none;
+}
+
+
+.table tbody td.product-stock {
+    display: table-cell;
+}
+.btn {
+    background-color: #FFE500;
+    color: #ffffff;
+    font-size: 20px;
+    min-width: 184px;
+    min-height: 55px;
+    line-height: 55px;
+    margin-bottom: 6px;
+    padding: 0;
+    border: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+}
+
+
+@media (max-width: 47.94em) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+.user-info:after,
+.banner-box .banner-bg-shape:after,
+.banner-box .banner-bg-shape:before,
+.banner-box .banner-hover-1 .banner-image:after,
+.banner-overlay:after,
+.blog-title:after,
+.btn:after,
+.variation-form .product-color-variations .product-color-variation-btn:after,
+.variation-form .reset_variations:before,
+.bg-shape:after,
+.bg-shape:before,
+.tab-style-1 .nav-link:after,
+.tab-style-2 .nav-link span:after,
+.widget-title:after,
+.widget-list.category-list li a:after,
+.tagcloud a:after,
+.instagram-feed .instagram-feed-item a:before,
+.hamburger-icon:after,
+.hamburger-icon:before,
+.product-color .action-btn span.current:after,
+.product-color-swatch-btn:after,
+.banner-box .banner-hover-2 .banner-image:after {
+    position: absolute;
+    content: "";
+}
+
+.header-toolbar__item,
+.header-toolbar__btn,
+.banner-box,
+.banner-box .banner-bg-shape,
+.banner-box .banner-info--inner,
+.banner-box .banner-hover-1 .banner-image,
+.banner-box .banner-hover-2 .banner-image,
+.banner-item,
+.blog,
+.blog-title,
+.blog-style-2 .blog-info,
+.single-post,
+.post-navigation .nav-links__inner,
+.btn,
+.ShoppingYar-element-carousel,
+.nav-center-bottom,
+.product-slide-nav,
+.comment-meta,
+.searchform,
+.cart-form .coupon,
+.mini-cart__product,
+.offcanvas-navigation .offcanvas-menu > li > a span,
+.offcanvas-navigation .offcanvas-menu li,
+.product-inner,
+.product-image,
+.product-size,
+.product-color,
+.product-color-swatch-btn,
+.ShoppingYar-product-action-list .action-btn,
+.ShoppingYar-product.product-style-2,
+.ShoppingYar-product.product-style-2 .ShoppingYar-product-action,
+.ShoppingYar-product-list .product-image,
+.product-summary .product-large-image,
+.variation-form .product-color-variations .product-color-variation-btn,
+.variation-form .reset_variations,
+.bg-shape,
+.bg-shape *,
+.accordion-slider-wrapper,
+.accordion-click-slider-wrapper,
+.tab-style-1 .nav-link,
+.tab-style-2 .nav-link span,
+.widget-title,
+.widget-list li a,
+.tagcloud a,
+.checkout-title h2,
+.product-gallery__large-image,
+.quantity,
+.method-box,
+.instagram-feed,
+.instagram-feed .instagram-feed-item,
+.instagram-feed .instagram-feed-item a,
+.countdown-2 .single-countdown:not(:last-child),
+.breadcrumb li,
+.hamburger-icon {
+    position: relative;
+}
+
+a,
+button,
+.user-info-menu,
+.banner-box .banner-info,
+.banner-box .banner-hover-1 .banner-image,
+.banner-box .banner-hover-1 .banner-image:after,
+.banner-box .banner-hover-2 .banner-image,
+.btn,
+.btn-submit,
+.slick-btn,
+.accordion-slider__btn,
+.accordion-click-slider__btn,
+.slick-arrow,
+.product-slide-nav .slick-btn,
+.product-slide-nav .accordion-slider__btn,
+.product-slide-nav .accordion-click-slider__btn,
+.searchform__input,
+.product-modal .close,
+.custom-close i,
+.searchform__body,
+.offcanvas-menu-wrapper .offcanvas-menu-inner,
+.offcanvas-navigation .offcanvas-menu li > .menu-expand,
+.ShoppingYar-product-list .product-thumbnail-action,
+.variation-form .product-color-variations .product-color-variation-btn,
+.tab-style-1 .nav-link:after,
+.ShoppingYar-global-overlay,
+.pagination li .page-number,
+.instagram-feed .instagram-feed-item a:before {
+    -webkit-transition: all 250ms ease-out;
+    -moz-transition: all 250ms ease-out;
+    -ms-transition: all 250ms ease-out;
+    -o-transition: all 250ms ease-out;
+    transition: all 250ms ease-out;
+}
+
+

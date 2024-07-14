@@ -1,0 +1,270 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{% block title %}BH{% endblock %}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/img/icon.png">
+    <!-- ************************* CSS Files ************************* -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
+
+    <!-- style css -->
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+</head>
+
+<body>
+<header>
+    <a class="mobile-menu-icon">
+        <img src="{% static 'images/mobile-menu.svg' %}">
+    </a>
+    <div class="mobile-off-canvas-bg hidden">
+    </div>
+    <nav class="navigation">
+        <a class="mobile-menu-close-icon">
+            <img src="{% static 'images/close-menu-icon.svg' %}">
+        </a>
+        <a class="menu-item">
+            <img src="{% static 'images/account.svg' %}"/>
+            <span>
+            Account
+        </span>
+        </a>
+        <a class="menu-item">
+            <img src="{% static 'images/account.svg' %}"/>
+            <span>
+            Account
+        </span>
+        </a>
+        <a class="menu-item">
+            <img src="{% static 'images/account.svg' %}"/>
+            <span>
+            Account
+        </span>
+        </a>
+        <a class="menu-item">
+            <img src="{% static 'images/account.svg' %}"/>
+            <span>
+            Account
+        </span>
+        </a>
+        <a class="menu-item">
+            <img src="{% static 'images/account.svg' %}"/>
+            <span>
+            Account
+        </span>
+        </a>
+    </nav>
+
+    <img src="{% static 'images/logo.png' %}" class="logo"/>
+    <div class="socialmedia">
+        <a
+                href="mailto:bloomhouse.seedbank.contact@gmail.com?subject=Your%20Subject%20Here">
+            <img class="navbar-image" src="{% static 'images/e-mail.jpg' %}" alt="Email">
+        </a>
+        <a href="https://wa.me/995558497292">
+            <img class="navbar-image" src="{% static 'images/whatsapp.jpg' %}" alt="WhatsApp">
+        </a>
+        <a href="https://www.instagram.com/bloomhouseir?igsh=ZGI0N3JrMjZ2OW9x">
+            <img class="navbar-image" src="{% static 'images/instagram.jpg' %}" alt="Instagram">
+        </a>
+        <a href="#">
+            <img class="navbar-image" src="{% static 'images/twitter.jpg' %}" alt="Twitter">
+        </a>
+    </div>
+</header>
+
+<script>
+
+    const mobileMenuIcon = document.querySelector('.mobile-menu-icon')
+    const mobileMenuCloseIcon = document.querySelector('.mobile-menu-close-icon')
+    const mobileOffCanvasBg = document.querySelector('.mobile-off-canvas-bg')
+    const mobileOffCanvasMenu = document.querySelector('.navigation')
+    mobileMenuIcon.addEventListener('click', () => {
+        mobileOffCanvasBg.classList.toggle('block')
+        document.body.classList.toggle('bodyfix')
+        mobileOffCanvasMenu.classList.remove('toleftmenuanimation')
+        mobileOffCanvasMenu.classList.toggle('torightmenuanimation')
+        mobileOffCanvasMenu.classList.toggle('openmenu')
+    })
+
+    function closeMobileMenu() {
+        mobileOffCanvasMenu.classList.toggle('torightmenuanimation')
+        mobileOffCanvasMenu.classList.toggle('toleftmenuanimation')
+        setTimeout(() => {
+            mobileOffCanvasMenu.classList.toggle('openmenu')
+        }, 1000)
+        setTimeout(() => {
+            mobileOffCanvasBg.classList.toggle('block')
+            document.body.classList.toggle('bodyfix')
+        }, 990)
+    }
+
+    mobileOffCanvasBg.addEventListener('click', closeMobileMenu)
+    mobileMenuCloseIcon.addEventListener('click', closeMobileMenu)
+</script>
+
+{% block content %}
+
+{% endblock %}
+
+
+<footer>
+    <div class="footer-cols">
+        <div class="newsletter">
+                <span class="">
+                    SIGN UP TO OUR NEWSLETTER
+                </span>
+            <form method="post" action="#">
+                <input type="email" placeholder="Enter your Email address">
+                <input type="submit" value="Subscribe">
+            </form>
+        </div>
+        <div class="information">
+                <span>
+                    INFORMATION
+                </span>
+            <ul>
+                <a href="">
+                    <li>
+                        About Us
+                    </li>
+                </a>
+                <a href="">
+                    <li>
+                        About Us
+                    </li>
+                </a>
+                <a href="">
+                    <li>
+                        About Us
+                    </li>
+                </a>
+                <a href="">
+                    <li>
+                        Shipping & Delivery
+                    </li>
+                </a>
+                <a href="">
+                    <li>
+                        About Us
+                    </li>
+                </a>
+                <a href="">
+                    <li>
+                        About Us
+                    </li>
+                </a>
+                <a href="">
+                    <li>
+                        About Us
+                    </li>
+                </a>
+            </ul>
+        </div>
+        <div class="information">
+                <span>
+                    INFORMATION
+                </span>
+            <ul>
+                <a href="">
+                    <li>
+                        About Us
+                    </li>
+                </a>
+                <a href="">
+                    <li>
+                        About Us
+                    </li>
+                </a>
+                <a href="">
+                    <li>
+                        Terms & Conditions
+                    </li>
+                </a>
+                <a href="">
+                    <li>
+                        About Us
+                    </li>
+                </a>
+                <a href="">
+                    <li>
+                        About Us
+                    </li>
+                </a>
+                <a href="">
+                    <li>
+                        About Us
+                    </li>
+                </a>
+                <a href="">
+                    <li>
+                        About Us
+                    </li>
+                </a>
+            </ul>
+        </div>
+        <div class="information">
+                <span>
+                    FOLLOW US
+                </span>
+            <ul>
+                <a href="">
+                    <li>
+                        Instagram
+                    </li>
+                </a>
+                <a href="">
+                    <li>
+                        Twitter
+                    </li>
+                </a>
+            </ul>
+        </div>
+    </div>
+    <p class="footer-desc">
+        All products on this website are intended for individuals aged 18 or older. We kindly ask that all
+        customers review their local laws before making any purchases. The products advertised are solely for
+        adult use, and any information provided is for educational purposes only. We do not condone, promote, or
+        encourage the use of illegal or controlled substances. All items are sold as novelty items and are not
+        meant for any illegal purposes. The descriptions and images of our products come directly from breeders
+        operating within legal contexts. Please note that cultivating any cannabis plant is illegal in many
+        jurisdictions, and our seeds should never be used for this purpose. Our seeds are sold strictly as
+        souvenirs or novelty items and should not be germinated. We strongly encourage you to abide by all
+        applicable laws.
+    </p>
+    <img src="{% static 'images/AK-47.png' %}" class="footer-ak47">
+</footer>
+
+
+<!-- jQuery JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Main JS -->
+<script src="{% static 'js/vendor.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/custom.js' %}"></script>
+
+
+<!-- Bootstrap JS (necessary for Bootstrap's JavaScript plugins) -->
+
+
+</body>
+</html>
