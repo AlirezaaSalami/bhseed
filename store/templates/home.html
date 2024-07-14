@@ -63,17 +63,35 @@
 
                 </div>
             </div>
+            <div class="slider-arrow arrow-left-slider">
+                <img src="{% static 'images/arrow-left.svg' %}">
+            </div>
+            <div class="slider-arrow arrow-right-slider">
+                <img src="{% static 'images/arrow-left.svg' %}">
+            </div>
         </div>
 
         <script>
             const carouselSlides = document.querySelectorAll('.slide')
             const carouselDots = document.querySelectorAll('.sliderdot')
+            const sliderArrows = document.querySelectorAll('.slider-arrow')
             const showSlidesTime = 5000;
+            let endSlideIndex = carouselSlides.length - 1
+            let activeSlideIndex
+            let thisSlide
+            let slideFunctionVar
 
-            function carousel(x) {
-                activeSlideIndex = x;
-                endSlideIndex = carouselSlides.length - 1;
-                setInterval(() => {
+            function activeSlide(x) {
+                activeSlideIndex = x === undefined ? 0 : x
+                carouselSlides.forEach(carouselSlide => {
+                    carouselSlide.classList.remove('active-slide')
+                })
+                carouselSlides[x].classList.add('active-slide')
+                carouselDots.forEach(carouselDot => {
+                    carouselDot.classList.remove('active-dot')
+                })
+                carouselDots[activeSlideIndex].classList.add('active-dot')
+                slideFunctionVar = function () {
                     carouselSlides.forEach(carouselSlide => {
                         carouselSlide.classList.remove('active-slide')
                     })
@@ -83,24 +101,42 @@
                         carouselDot.classList.remove('active-dot')
                     })
                     carouselDots[activeSlideIndex].classList.add('active-dot')
-                }, showSlidesTime)
-
-                carouselDots.forEach(carouselDot => {
-                    carouselDot.addEventListener('click', () => {
-                        for (i = 0; i <= endSlideIndex; i++) {
-                            carouselDots[i].classList.remove('active-dot')
-                        }
-                        carouselDot.classList.add('active-dot')
-                        const dotIndex = [].indexOf.call(carouselDots, carouselDot);
-
-
-                    })
-
-                })
+                }
+                thisSlide = setInterval(slideFunctionVar, showSlidesTime)
             }
 
-            document.addEventListener('DOMContentLoaded', () => carousel(0))
+            document.addEventListener('DOMContentLoaded', activeSlide(0))
 
+            carouselDots.forEach(carouselDot => {
+                carouselDot.addEventListener('click', () => {
+                    carouselDots.forEach(carouselDot => {
+                        carouselDot.classList.remove('active-dot')
+                    })
+                    carouselDot.classList.add('active-dot')
+                    let dotIndex = [].indexOf.call(carouselDots, carouselDot);
+                    clearInterval(thisSlide)
+                    activeSlide(dotIndex)
+                })
+            })
+
+            sliderArrows.forEach(sliderArrow => {
+                sliderArrow.addEventListener('click', () => {
+                    if (sliderArrow.classList.contains('arrow-right-slider')) {
+                        clearInterval(thisSlide)
+                        let activeThisSlideIndex = activeSlideIndex === 2 ? -1 : activeSlideIndex
+                        activeSlide(activeThisSlideIndex + 1)
+                    } else {
+                        clearInterval(thisSlide)
+                        let activeThisSlideIndex = activeSlideIndex === 0 ? 3 : activeSlideIndex
+                        activeSlide(activeThisSlideIndex - 1)
+                    }
+
+                    {#let dotIndex = [].indexOf.call(carouselDots, carouselDot);#}
+                    {#console.log(dotIndex)#}
+                    {#clearInterval(thisSlide)#}
+                    {#activeSlide(dotIndex)#}
+                })
+            })
         </script>
 
         <div class="offers-section">
